@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block titulo %} Servicios en la nube {% endblock %}
+
+{% block contenido %}
+<h1 class="special"> </h1>
+
+<p>Crear notas</p>
+    <form class="formulario" action="/crearnota" method="post">
+        <label for="titulo">Titulo de la Nota: </label><br>
+        <input type="text" name="campotitulo" value="">
+        <br>
+        <label for="cuerpo">Cuerpo de la nota: </label><br>
+        <input type="text" name="campocuerpo" value="">
+        <input class="boton" type="submit" value="Crear Nota">
+    </form>
+    <table>
+        {% for nota in consulta %}
+        <tr>
+            <td>{{nota.tituloNota}}</td>
+            <td>{{nota.cuerpoNota}}</td>
+            <td><a href="/eliminarnota/{{nota.idNota}}">Eliminar</a></td>
+            <td><a href="/editarnota/{{nota.idNota}}">Editar</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+
+{% endblock %}
+

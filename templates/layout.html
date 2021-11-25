@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+{% block head %}
+<head>
+  <meta charset="utf-8">
+  <title>{% block titulo %} {% endblock %}</title>
+  <link rel="styleSheet"  href="/static/css/estilo.css">
+</head>
+{% endblock %}
+
+{% block body %}
+
+{% block encabezado %}
+<!-- <h1> <img src="/static/LogoTec2.png" height="45"></h1> -->
+<header class="header">
+  <nav class="nav">
+    <a href="#" class="logo nav-link"><img src="/static/LogoTec2.png" height="45"> Aplicacion de notas</a>
+    <ul class="nav-menu">
+      <li class="nav-menu-item"><a href="/leernotas" class="nav-menu-link nav-link">Leer Nota</a></li>
+      <li class="nav-menu-item"><a href="/about" class="nav-menu-link nav-link">Acerca</a></li>
+
+    </ul>
+  </nav>
+
+</header>
+
+
+
+{% endblock %}
+
+
+{% block contenido %}
+
+{% endblock %}
+
+{% block pie %}
+
+
+
+<footer>
+  <h1 class="special">Pie de Pagina </h1>
+  <h1 class="special">Creada por Sebastian</h1>
+</footer>
+
+{% endblock %}
+</body>
+{% endblock %}
+</html>
